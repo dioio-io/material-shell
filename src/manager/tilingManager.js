@@ -120,6 +120,19 @@ var TilingManager = class TilingManager extends MsManager {
         return TilingLayoutByKey[newKey];
     }
 
+    getNextLayoutKey(currentLayout, direction) {
+        let { key } = currentLayout.constructor;
+        if (!this.availableLayouts.includes(key)) {
+            key = this.availableLayouts[0];
+        }
+        let nextIndex = this.availableLayouts.indexOf(key) + direction;
+        if (nextIndex < 0) {
+            nextIndex += this.availableLayouts.length;
+        }
+        nextIndex = nextIndex % this.availableLayouts.length;
+        return this.availableLayouts[nextIndex];
+    }
+    
     getFilteredWindows(windows) {
         return windows.filter((window) => {
             return !window.is_attached_dialog();

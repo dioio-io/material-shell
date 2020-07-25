@@ -79,6 +79,16 @@ const hotKeysLabels = {
     'navigate-to-workspace-8': 'Navigate to workspace 8',
     'navigate-to-workspace-9': 'Navigate to workspace 9',
     'navigate-to-workspace-10': 'Navigate to workspace 10',
+    'change-to-maximize-on-current': 'Change to maximize layout on current workspace',
+    'change-to-split-on-current': 'Change to split layout on current workspace',
+    'change-to-half-on-current': 'Change to half layout on current workspace',
+    'change-to-half-vertical-on-current': 'Change to half-vertical layout on current workspace',
+    'change-to-ratio-on-current': 'Change to ratio layout on current workspace',
+    'change-to-grid-on-current': 'Change to grid layout on current workspace',
+    'change-to-float-on-current': 'Change to float layout on current workspace',
+    'change-to-simple-on-current': 'Change to simple layout on current workspace',
+    'change-to-simple-horizontal-on-current': 'Change to simple-horizontal layout on current workspace',
+    'change-to-simple-vertical-on-current': 'Change to simple-vertical layout on current workspace0',
 };
 
 const layouts = {

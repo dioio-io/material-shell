@@ -60,6 +60,7 @@ var MsWorkspace = class MsWorkspace {
         );
 
         this.tilingLayout = new Layout(this);
+
         this.msWorkspaceActor.tileableContainer.set_layout_manager(
             this.tilingLayout
         );
@@ -278,11 +279,22 @@ var MsWorkspace = class MsWorkspace {
     }
 
     nextTiling(direction) {
-        this.tilingLayout.onDestroy();
-        const Layout = Me.tilingManager.getNextLayout(
+        const layout = Me.tilingManager.getNextLayoutKey(
             this.tilingLayout,
             direction
         );
+        this.tileToLayout(layout);
+    }
+
+    tileToSpecific(key) {
+        const layout = Me.tilingManager.getLayoutByKey(key);
+        this.tileToLayout(layout)
+    }
+
+    tileToLayout(layout) {
+        this.tilingLayout.onDestroy();
+        
+        const Layout = Me.tilingManager.getLayoutByKey(layout);
         this.tilingLayout = new Layout(this);
         this.msWorkspaceActor.tileableContainer.set_layout_manager(
             this.tilingLayout

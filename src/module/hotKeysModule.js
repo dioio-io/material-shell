@@ -6,7 +6,6 @@ const Main = imports.ui.main;
 const Me = imports.misc.extensionUtils.getCurrentExtension();
 const { getSettings } = Me.imports.src.utils.settings;
 const { MsWindow } = Me.imports.src.layout.msWorkspace.msWindow;
-
 /* exported HotKeysModule, KeyBindingAction */
 
 var KeyBindingAction = {
@@ -259,6 +258,27 @@ var HotKeysModule = class HotKeysModule {
                         : workspaceIndex
                 ].activate();
             });
+        });
+
+        // change current workspace to specific layout
+        [
+            'maximize',
+            'split',
+            'grid',
+            'half',
+            'half-horizontal',
+            'half-vertical',
+            'ratio',
+            'float',
+            'simple',
+            'simple-horizontal',
+            'simple-vertical',
+        ].forEach((layoutKey) => {
+            const actionKey = `CHANGE_TO_${layoutKey.toUpperCase()}_ON_CURRENT_WORKSPACE`;
+            KeyBindingAction[
+                actionKey
+            ] = `change-to-${layoutKey}-on-current-workspace`;
+
         });
 
         this.actionNameToActionMap.forEach((action, name) => {

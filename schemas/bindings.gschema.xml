@@ -72,6 +72,57 @@
         Toggle the material-shell UI to simulate fullscreen
       </description>
     </key>
+    <!-- Change to specific layout mode -->
+    <key name="change-to-maximize-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>R']]]></default>
+      <summary>Change to maximize layout</summary>
+      <description>Change to maximize layout on current workspace</description>
+    </key>
+    <key name="change-to-split-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>T']]]></default>
+      <summary>Change to split layout</summary>
+      <description>Change to split layout on current workspace</description>
+    </key>
+    <key name="change-to-half-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>Y']]]></default>
+      <summary>Change to half layout</summary>
+      <description>Change to half layout on current workspace</description>
+    </key>
+    <key name="change-to-half-vertical-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>U']]]></default>
+      <summary>Change to half-vertical layout</summary>
+      <description>Change to half-vertical layout on current workspace</description>
+    </key>
+    <key name="change-to-ratio-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>I']]]></default>
+      <summary>Change to ratio layout</summary>
+      <description>Change to ratio layout on current workspace</description>
+    </key>
+    <key name="change-to-grid-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>O']]]></default>
+      <summary>Change to grid layout</summary>
+      <description>Change to grid layout on current workspace</description>
+    </key>
+    <key name="change-to-float-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>P']]]></default>
+      <summary>Change to float layout</summary>
+      <description>Change to float layout on current workspace</description>
+    </key>
+    <key name="change-to-simple-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>F']]]></default>
+      <summary>Change to simple layout</summary>
+      <description>Change to simple layout on current workspace</description>
+    </key>
+    <key name="change-to-simple-horizontal-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>G']]]></default>
+      <summary>Change to simple-horizontal layout</summary>
+      <description>Change to simple-horizontal layout on current workspace</description>
+    </key>
+    <key name="change-to-simple-vertical-on-current" type="as">
+      <default><![CDATA[['<Shift><Super>H']]]></default>
+      <summary>Change to simple-vertical layout</summary>
+      <description>Change to simple-vertical layout on current workspace</description>
+    </key>
     <!-- Workspace actions -->
     <key name="previous-workspace" type="as">
       <default><![CDATA[['<Super>w']]]></default>
@@ -87,7 +138,7 @@
         Focus the next workspace 
       </description>
     </key>
-        <key name="navigate-to-workspace-1" type="as">
+    <key name="navigate-to-workspace-1" type="as">
       <default><![CDATA[['<Super>1']]]></default>
       <summary>Navigate to workspace 1</summary>
       <description>
